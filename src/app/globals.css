@@ -88,6 +88,15 @@ body {
 }
 
 .tiptap {
+  a {
+    @apply text-blue-600;
+    cursor: pointer;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+
   img {
     display: block;
     height: auto;
@@ -188,10 +197,14 @@ body {
     font-size: 1.1rem;
   }
 
-  h4,
-  h5,
-  h6 {
+  h4 {
     font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.9rem;
+  }
+  h6 {
+    font-size: 0.8rem;
   }
 
   ul,
@@ -246,4 +259,32 @@ body {
       margin: 0;
     }
   }
+}
+
+/* For mobile */
+.floating-threads {
+  display: none;
+}
+
+/* For desktop */
+.anchored-threads {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  right: 12px;
+}
+
+@media (max-width: 640px) {
+  .floating-threads {
+    display: block;
+  }
+
+  .anchored-threads {
+    display: none;
+  }
+}
+
+div[data-radix-popper-content-wrapper] {
+  z-index: 50 !important;
 }
