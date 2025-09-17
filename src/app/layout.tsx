@@ -13,7 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Docs',
-  description: 'Created by Momen Yasser',
+  description:
+    'Real-time editor similar to google docs with live collaboration Created by Momen Yasser',
 }
 
 export default function RootLayout({
